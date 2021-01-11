@@ -1,0 +1,30 @@
+// var
+// let
+// const déclaration + initialisation immédiate;
+
+// ne plus jamais utiliser VAR
+// toujours utiliser CONST
+// si CONST impossible utiliser LET
+
+// HOISTING
+
+// var cv = [] 
+// var CV = 5
+// console.log
+
+// function a (CV){
+  //  traitement CV + 2
+//}
+
+// CV = 7
+// scope global
+// scope
+
+// JSON Valid
+
+let cv = [
+  {
+    "Values":
+      "I consider that the foundation of a good developer is a constant desire to learn and follow new trends.",
+  }
+];
