@@ -76,3 +76,4 @@ for (const element of about) {
     let getSection = document.querySelector(".info");
     getSection.appendChild(paragraphe); // element parent
 }
+
