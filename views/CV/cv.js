@@ -6,8 +6,6 @@ let cv = [
   {
     name: "Pariset",
     lastName: "Yoann",
-    values:
-      "I consider that the foundation of a good developer is a constant desire to learn and follow new trends.",
     poste: "junior full-stack developer", 
     navBar : [{name : "Home", liClass : "active", hrefA : "#", aClass : ""}, 
               {name : "About", liClass : "", hrefA : "#page-about",  aClass : "scrollToAbout"}, 
@@ -15,8 +13,13 @@ let cv = [
               {name : "Resume", liClass : "", hrefA : "#page-resume", aClass : "scrollToResume"}, 
               {name : "Experience", liClass : "", hrefA : "#page-experience", aClass : "scrollToExperience"}, 
               {name: "Portfolio", liClass : "", hrefA : "#page-portoflio", aClass : "scrollToPortoflio"}, 
-              {name : "Contact me", liClass : "", hrefA : "#page-contact", aClass : "scrollToContact"}]
-  },
+              {name : "Contact me", liClass : "", hrefA : "#page-contact", aClass : "scrollToContact"}],
+feature : [{title : "Values", texte :"I consider that the foundation of a good developer is a constant desire to learn and follow new trends."},
+{title : "Goals", texte :" My goal is simple: to become a monster in web development and especially in the use of the Vue.js framework."},
+{title : "Hobbies", texte :" I love music, travelling and video-games. I believe that a  multidisciplinary artistic vision has a positive impact on my work."} 
+
+]
+            },
 ];
 
 // refactor du nom de la variable
@@ -42,4 +45,17 @@ for (const element of navBar) {
   let mainMenu = document.querySelector(".mainMenu");
   mainMenu.appendChild(navLink);
 
+}
+let feature = cv.feature;
+for (const element of feature) {
+  //creation element article
+  let article  = document.createElement("article");
+// ajout des attributs à la balise article
+  article.setAttribute("class", "feat");
+//creation de h2 et p
+  article.innerHTML = "<h2>"+element.title+"</h2> <p>"+element.texte+"</p>"
+  //ajout du contenu de h2 et de p
+  let section = document.getElementById("features");
+  //On rejoute l'article dans la session "features"
+  section.appendChild(article);
 }
