@@ -41,7 +41,8 @@ request().then(cvs => {
       "</a>";
       let mainMenu = document.querySelector(".mainMenu");
       mainMenu.appendChild(navLink);
-    }
+  }
+  
     
     let feature = cv.feature;
     
