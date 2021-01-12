@@ -1,25 +1,40 @@
 let questions = [{
         question: "What is 10/2?",
-        answers: {
+        reponse: {
             a: '3',
             b: '5',
             c: '115'
         },
-        correctAnswer: 'b'
+        correctReponse: 'b'
     },
     {
         question: "What is 30/3?",
-        answers: {
+        reponse: {
             a: '3',
             b: '5',
             c: '10'
         },
-        correctAnswer: 'c'
-
-
+        correctReponse: 'c'
 
     }
 ];
+
+generateRadio("choix", "quizz");
+
+
+
+// affichage du questionnaire gloabal dans une div
+// <div>
+//      <label type="radio" name="question1 >question 1</label>
+//<input type="radio" name="choix">choix a</input>
+//<input type="radio"name="choix">choix b</input>
+//<input type="radio" name="choix">choix c</input>
+
+//<button>
+
+
+//</div>
+
 
 // questions = questions[0];
 
@@ -34,12 +49,44 @@ let questions = [{
 //     getDiv7.appendChild(questionNumero7);
 // }
 
-for (element of questions) {
-    let question_div = document.createElement("div");
-    question_div.innerHTML = "<label>" + element.question + "</label><br/>";
-    let getDiv = document.querySelector("body");
-    getDiv.appendChild(question_div);
+// for (element of questions) {
+//     let question_div = document.createElement("div");
+//     question_div.innerHTML = "<label>" + element.question + "</label><br/>";
+//     let getDiv = document.querySelector("body");
+//     getDiv.appendChild(question_div);
+//     for (value of)
 
+
+// }
+
+//  function genererQuizz(conteneurQuestions, conteneurReponses, buttonValider, conteneurResultats){
+
+//         function montrerQuestions(conteneurQuestions, conteneurReponses){
+
+//             let entreUser = [];
+//             let reponseUser; 
+
+//             for(let i = 0; i<conteneurQuestions.length; i++){
+//                 reponseUser = []; // preparation espace pour stockage reponses
+//                 for(let valeurReponse)
+//             }
+
+
+
+//         }
+
+
+
+
+//  }
+
+function generateRadio(name, idParent) {
+    let bouttonRadio = document.createElement("input");
+    bouttonRadio.setAttribute("type", "radio");
+    bouttonRadio.setAttribute("name", name);
+    let getDiv = document.getElementById(idParent);
+    console.log(getDiv);
+    getDiv.appendChild(bouttonRadio);
 
 }
 
