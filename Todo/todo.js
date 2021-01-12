@@ -38,8 +38,10 @@ function newElement() {
     alert("You must write something!");
   } else {
     document.getElementById("theList").appendChild(li);
+    document.getElementById("myInput").value = "";
   }
   document.getElementById("theList").value = "";
+  
 
   var span = document.createElement("SPAN");
   var txt = document.createTextNode("\u00D7");
@@ -49,8 +51,8 @@ function newElement() {
 
   for (i = 0; i < close.length; i++) {
     close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
+      //var div = this.parentElement;  //fait référence au span(bouton close) d'un élément de la liste bien précis 
+      this.parentElement.style.display = "none";
     }
   }
 }
