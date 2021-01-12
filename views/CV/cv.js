@@ -54,6 +54,29 @@ request().then(cvs => {
         article.innerHTML =
         "<h2>" + element.title + "</h2> <p>" + element.texte + "</p>";
         //ajout du contenu de h2 et de p
+
+    let section = document.getElementById("features");
+    //On rejoute l'article dans la session "features"
+    section.appendChild(article);
+}
+
+
+let about = cv.about;
+
+
+/**
+ * creation contenu <p> via une bloucle qui ajoute chaque p à chaque itération
+ */
+for (const element of about) {
+    //création de la balise p
+    let paragraphe = document.createElement("p");
+    //intégration du contenu dans paragraphe
+    paragraphe.innerHTML = element.para;
+    //selection de balise parente dans lequel le p va etre integré
+    let getSection = document.querySelector(".info");
+    getSection.appendChild(paragraphe); // element parent
+}
+
         let section = document.getElementById("features");
         //On rajoute l'article dans la session "features"
         section.appendChild(article);
@@ -74,3 +97,4 @@ request().then(cvs => {
         getSection.appendChild(paragraphe); // element parent
     }
 }); // fin du .then
+
