@@ -71,8 +71,18 @@ function generateDiv(idDivQuestion, idParent) {
 
 function showResult(event) {
   event.preventDefault();
-  console.log(document.querySelectorAll(".choix-q1"));
+  const choixFiltre = document.querySelectorAll(".choix-q1");
 
+  let userReponse = [];
+
+  //Parcours la liste des choix pour selectionner l'élément choisi
+  choixFiltre.forEach(element => {
+    if (element.checked) {
+      userReponse.push(element.value);
+    }
+  });
+
+console.log(userReponse);
 
   
 }
