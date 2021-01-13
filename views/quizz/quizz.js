@@ -67,7 +67,7 @@ for (const i of questions) {
 let bouttonValider = document.createElement("button");
 bouttonValider.setAttribute("type", "submit");
 bouttonValider.setAttribute("onclick", "showResult(event)");
-bouttonValider.textContent = "VERIFIER";
+bouttonValider.textContent = "VALIDER";
 let getForm = document.querySelector("form");
 getForm.appendChild(bouttonValider);
 
@@ -130,7 +130,12 @@ function showResult(event) {
         });
         index++;
     }
-    goodAnswer = `Vous avez ${goodAnswer} bonnes réponses`;
+    if (goodAnswer > 1) {
+        goodAnswer = `Vous avez ${goodAnswer} bonnes réponses`;
+    } else {
+        goodAnswer = `Vous avez ${goodAnswer} bonne réponse`;
+
+    }
 
     resultats.textContent = goodAnswer;
 }
