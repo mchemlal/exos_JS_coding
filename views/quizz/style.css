@@ -1,90 +1,89 @@
 :root {
-    font-size: 16px;
-    --color-bg: #cdcdcd;
+  font-size: 16px;
+  --color-bg: #cdcdcd;
 }
 
 body {
-    background-color: #b3b3b3;
-    width: 100%;
+  background-color: #b3b3b3;
+  width: 100%;
 }
 
 h1 {
-    border: 1px solid black;
-    border-radius: 10px;
-    padding-left: 21%;
-    margin-left: 24%;
-    /* margin-right: 15%; */
-    background-color: white;
-    box-shadow: 1px 3px 5px #424141c2;
-    width: 31%;
-    padding-top: 5px;
-    padding-bottom: 5px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding-left: 21%;
+  margin-left: 24%;
+  /* margin-right: 15%; */
+  background-color: white;
+  box-shadow: 1px 3px 5px #424141c2;
+  width: 31%;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 #quizz {
-    margin: 1rem auto;
-    border-radius: 1rem;
-    box-shadow: 1px 3px 5px #424141c2;
-    padding: 1rem;
-    width: 50%;
-    background-color: var(--color-bg);
-    border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto;
+  margin-top: 1rem;
+  padding-bottom: 3rem;
+  border-radius: 1rem;
+  box-shadow: 1px 3px 5px #424141c2;
+  padding: 1rem;
+  width: 50%;
+  background-color: var(--color-bg);
+  border: 1px solid;
 }
 
-#quizz {
-    margin-top: 1rem;
-    padding-bottom: 3rem;
-}
-
-#quizz>div {
-    margin: 1rem 0;
-    border: 1px solid white;
-    box-shadow: 1px 3px 5px #424141c2;
-    border-radius: 1rem;
-    box-shadow: ;
-    padding-left: 1rem;
-    padding-bottom: 1rem;
-    padding-top: 1rem;
+#quizz > div {
+  margin: 1rem 0;
+  border: 1px solid white;
+  box-shadow: 1px 3px 5px #424141c2;
+  border-radius: 1rem;
+  box-shadow: ;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
 }
 
 #quizz input,
 #quizz label {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 label {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 label[for="choix"] {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .bonneReponse {
-    color: green;
+  color: green;
 }
 
 .mauvaiseReponse {
-    color: red;
+  color: red;
 }
 
 button {
-    margin-top: 2rem;
-    font-size: 1.5rem;
-    border: 1px solid black;
-    box-shadow: 2px 3px 5px #424141c2;
-    /* border: none; */
-    border-radius: 0.5rem;
-    margin-left: 40rem;
-    outline-style: none;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  border: 1px solid black;
+  box-shadow: 2px 3px 5px #424141c2;
+  /* border: none; */
+  border-radius: 0.5rem;
+  outline-style: none;
 }
 
 #resultats {
-    margin: 0 auto;
-    text-align: center;
-    border-radius: 0.5rem;
-    font-size: 1.7em;
-    margin-left: 40%;
-    background-color: white;
-    box-shadow: 2px 3px 5px #424141c2;
+  margin: 0 auto;
+  padding: 0.3rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  font-size: 1.7em;
+  margin-left: 40%;
+  background-color: white;
+  box-shadow: 2px 3px 5px #424141c2;
 }
