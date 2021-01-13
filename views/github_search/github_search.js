@@ -1,25 +1,22 @@
-// creation de l'appel API
 
-const github_URI = "https://api.github.com/users/tankarasu";
+let buttonSubmit = document.getElementById("submit");
+buttonSubmit.addEventListener('click', fetchUser);
+
+function fetchUser(event) {
+    event.preventDefault();
+    let userInput = document.getElementById("input");
+    let user = userInput.value;
+
+const github_URI = `https://api.github.com/users/${user}`;
 
 fetch(github_URI).then(res => {
         return res.json();
     })
     .then(json => {
 
-
         let data = json;
 
-
-        let { avatar_url, followers, following, login, name, public_repos } = data;
-
-
-        // let avatar = document.createElement('img');
-        // avatar.setAttribute("id", "avatar");
-        // avatar.setAttribute("src", avatar_url);
-        // avatar.setAttribute("alt", "photo-profil-github");
-        // let getAvatar = document.getElementById("resultats");
-        // getAvatar.appendChild(avatar);
+        let { avatar_url, followers, following, name, public_repos } = data;
 
         let avatar = document.querySelector("#avatar");
         avatar.setAttribute("src", avatar_url);
@@ -36,9 +33,5 @@ fetch(github_URI).then(res => {
 
         let public_repository = document.querySelector("#public_repository");
         public_repository.textContent = public_repos;
-
-
-
-
-
     })
+}
