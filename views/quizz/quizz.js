@@ -14,7 +14,7 @@ let questions = [{
         reponse: {
             a: "Ophelie Winter",
             b: "Diams",
-            c: "L'Iman Bajrafil",
+            c: "L'Imam Bajrafil",
         },
         correctReponse: "Ophelie Winter",
     },

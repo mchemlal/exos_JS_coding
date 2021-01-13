@@ -41,6 +41,11 @@
           "liClass": "",
           "hrefA": "#page-contact",
           "aClass": "scrollToContact"
+        }, {
+          "name": "TP-JS",
+          "liClass": "",
+          "hrefA": "../../index.html",
+          "aClass": "scrollToContact"
         }
       ],
       "feature": [
