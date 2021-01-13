@@ -8,28 +8,34 @@ const IP_request = "http://ip-api.com/json/";
 
 // géolocalisation par IP
 fetch(IP_request)
-  .then(res => {
-    // on parse la réponse reçu (res) au format json
-    return res.json();
-  })
-  .then(json => {
-    // on affecte la réponse au format json à une variable
-    let data = json;
-    const city = data.city;
-    const lat = data.lat;
-    const lon = data.lon;
-    const requestGeo = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${Weather_API_KEY}&units=metric`;
+    .then(res => {
+        // on parse la réponse reçu (res) au format json
+        return res.json();
+    })
+    .then(json => {
+        // on affecte la réponse au format json à une variable
+        let data = json;
+        const city = data.city;
+        const lat = data.lat;
+        const lon = data.lon;
+        const requestGeo = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${Weather_API_KEY}&units=metric`;
 
-    fetch(requestGeo)
-      .then(res => res.json())
-      .then(forecast => {
-        // destructure forecast pour extraire main
-        let { main } = forecast;
-        let temp = main.temp;
-          console.log(forecast);
-          // météo des jours suivants
-          
-          // on code l'appli
+        fetch(requestGeo)
+            .then(res => res.json())
+            .then(forecast => {
+                // destructure forecast pour extraire main
+                let { main } = forecast;
+                let temp = main.temp;
+                console.log(forecast);
+                // météo des jours suivants
 
-      });
-  });
+                // on code l'appli
+
+                let temperature = document.getElementById("temperature");
+                temperature.textContent = Math.ceil(temp * 2) / 2;
+
+
+
+
+            });
+    });
