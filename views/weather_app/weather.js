@@ -32,7 +32,7 @@ fetch(IP_request)
                 // on code l'appli
 
                 let temperature = document.getElementById("temperature");
-                temperature.textContent = Math.ceil(temp * 2) / 2;
+                temperature.textContent = Math.ceil(temp * 2) / 2; // formule pour arrondir au demi superieur
 
 
 
