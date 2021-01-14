@@ -23,35 +23,36 @@ fetch(IP_request)
         fetch(requestGeo)
             .then(res => res.json())
             .then(forecast => {
-        // destructure forecast pour extraire main
-        let { main } = forecast;
-        let temp = main.temp;
-        console.log(forecast);
-        let villeActuelle = main.city;
+                // destructure forecast pour extraire main
+                let { main } = forecast;
+                let temp = main.temp;
+                console.log(forecast);
+                let villeActuelle = main.city;
 
-        let {description , icon} = forecast.weather[0]; 
+                let { description, icon } = forecast.weather[0];
 
-        let {speed} = forecast.wind;
-        
+                let { speed } = forecast.wind;
 
-        // météo des jours suivants
 
-        // on code l'appli
+                // météo des jours suivants
 
-        let temperature = document.getElementById("temperature");
-        temperature.textContent = Math.ceil(temp * 2) / 2; // formule pour arrondir au demi superieur
+                // on code l'appli
 
-        let ville = document.getElementById("ville");
-        ville.textContent = city;   
+                let temperature = document.getElementById("temperature");
+                let text = (Math.ceil(temp * 2) / 2) + " C°";
+                temperature.textContent = text; // formule pour arrondir au demi superieur
 
-        let descr = document.getElementById("description");
-        descr.textContent = description;
+                let ville = document.getElementById("ville");
+                ville.textContent = city;
 
-        let iconWeather = document.getElementById("icon")
-        iconWeather.setAttribute("src", `http://openweathermap.org/img/wn/${icon}@2x.png`);
+                let descr = document.getElementById("description");
+                descr.textContent = description;
 
-        let windSpeed = document.getElementById("vitesseVent");
-        windSpeed.textContent = Math.round(speed);
+                let iconWeather = document.getElementById("icon")
+                iconWeather.setAttribute("src", `http://openweathermap.org/img/wn/${icon}@2x.png`);
+
+                let windSpeed = document.getElementById("vitesseVent");
+                windSpeed.textContent = Math.round(speed);
 
             });
     });
