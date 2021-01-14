@@ -1,4 +1,3 @@
-
 // Creation et ajout d'un boutton "close" sur chaque élément de la liste 
 var myNodelist = document.getElementsByTagName("LI");
 var i;
@@ -15,8 +14,9 @@ var close = document.getElementsByClassName("close");
 var i;
 for (i = 0; i < close.length; i++) {
   close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
+    var li = this.parentElement;
+    //this = span
+    li.style.display = "none";
   }
 }
 
@@ -28,13 +28,14 @@ list.addEventListener('click', function(ev) {
   }
 }, false);
 
+
 // Creation d'un nouvel élément de la liste lorsque le boutton "add" est cliqué
 function newElement() {
   var li = document.createElement("li");
-  var inputValue = document.getElementById("myInput").value;
-  var t = document.createTextNode(inputValue);
-  li.appendChild(t);
-  if (inputValue === '') {
+  var inputValue = document.getElementById("myInput");
+  let { value } = inputValue;
+  li.textContent = value;
+  if (value === '') {
     alert("You must write something!");
   } else {
     document.getElementById("theList").appendChild(li);
@@ -42,7 +43,6 @@ function newElement() {
   }
   document.getElementById("theList").value = "";
   
-
   var span = document.createElement("SPAN");
   var txt = document.createTextNode("\u00D7");
   span.className = "close";
@@ -51,7 +51,6 @@ function newElement() {
 
   for (i = 0; i < close.length; i++) {
     close[i].onclick = function() {
-      //var div = this.parentElement;  //fait référence au span(bouton close) d'un élément de la liste bien précis 
       this.parentElement.style.display = "none";
     }
   }
