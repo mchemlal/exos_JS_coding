@@ -75,6 +75,7 @@ getForm.appendChild(bouttonValider);
 function generateRadio(name, idParent, value) {
   let bouttonRadio = document.createElement("input");
   bouttonRadio.setAttribute("type", "radio");
+  bouttonRadio.setAttribute("required", "");
   bouttonRadio.setAttribute("name", name);
   bouttonRadio.setAttribute("class", name);
   bouttonRadio.setAttribute("value", value);

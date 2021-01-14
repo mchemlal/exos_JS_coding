@@ -9,17 +9,20 @@
 </head>
 
 <body>
-    <h1>METEO</h1>
+    <h1 class="meteo">METEO</h1>
     <div id="app">
         <p class="prevision"><span id="temperature"></span></p>
-        <p class="prevision">&#128205<span id="ville"></span></p>
+        <p class="ville">&#128205<span id="ville"></span></p>
         <p class="prevision">
             Vent: <span id="vitesseVent"></span> km/h</p>
-        <figure class="prevision">
-            <img src="" alt="temps" id="icon">
-            <figcaption><span id="description"></span></figcaption>
-        </figure>
-    </div>
+            <figure class="prevision">
+                <img src="" alt="temps" id="icon">
+                <figcaption><span id="description"></span></figcaption>
+            </figure>
+        </div>
+        <button class="returnButton">
+            <a href="../../index.html" class="returnLink">TP-JS</a>
+        </button>
 
 
     <script src="./weather.js"></script>

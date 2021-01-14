@@ -1,31 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
-
-<form id="barreRecherche">
-<input type="text" id="input" placeholder="Entrer un nom d'utilisateur Github">
-<button type="submit" id="submit">Valider</button>
-</form>
+  <body>
+    <form id="barreRecherche">
+      <input
+        type="text"
+        id="input"
+        placeholder="Entrer un nom d'utilisateur Github"
+      />
+      <button type="submit" id="submit">Valider</button>
+    </form>
 
     <div id="resultats">
-        <img id="avatar" src="./profil-2.jpg" alt="">
-        <p> <span id="name">John Doe</span></p>
-        <p>Following: <span id="following"></span></p>
-        <p>Followers: <span id="followers"></span></p>
-        <p>Public repository: <span id="public_repository"></span></p>
+      <img id="avatar" src="./profil-2.jpg" alt="" />
+      <p><span id="name">John Doe</span></p>
+      <p>Following: <span id="following"></span></p>
+      <p>Followers: <span id="followers"></span></p>
+      <p>Public repository: <span id="public_repository"></span></p>
     </div>
 
-
+    <button class="returnButton">
+      <a href="../../index.html" class="returnLink">TP-JS</a>
+    </button>
 
     <script src="../github_search/github_search.js"></script>
-</body>
-
+  </body>
 </html>

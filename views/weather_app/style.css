@@ -1,46 +1,69 @@
 :root {
-    font-family: Helvetica, sans-serif;
-    font-size: 16px;
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
 }
 
 body {
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1 {
-    text-align: center;
-    margin-bottom: 5%;
-    margin-top: 4%;
+  text-align: center;
+  margin-bottom: 5%;
+  margin-top: 4%;
 }
 
 #app {
-    /* border: 5px solid grey; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    width: 250px;
-    border-radius: 40px;
-    background-color: #22283171;
-    box-shadow: 1px 2px 6px;
-    padding: 2.4rem 0;
+  /* border: 5px solid grey; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 250px;
+  border-radius: 40px;
+  background-color: #22283171;
+  box-shadow: 1px 2px 6px;
+  padding: 2.4rem 0;
+  margin-bottom: 1rem;
 }
 
 .prevision {
-    text-align: center;
-    color: rgb(37, 36, 36);
-    font-size: 1em;
+  text-align: center;
+  color: rgb(37, 36, 36);
+  font-size: 1em;
 }
 
 #temperature {
-    color: white;
-    font-size: 3rem;
-    text-shadow: 1px 3px 7px rgba(0, 0, 0, 0.897);
+  color: white;
+  font-size: 3rem;
+  text-shadow: 1px 3px 7px rgba(0, 0, 0, 0.897);
+}
+
+#ville {
+  color: white;
+  font-size: 1.35rem;
+  text-shadow: 1px 3px 7px rgba(0, 0, 0, 0.897);
+}
+
+.ville {
+  font-size: 1.75rem;
 }
 
 #icon {
-    width: 180px;
+  width: 180px;
+}
+
+.meteo {
+  font-size: 4rem;
+  color: rgb(44, 41, 41);
+  font-family: Helvetica, sans-serif;
+}
+
+.returnLink {
+  color: black;
+  text-decoration: none;
+  font-size: 1rem;
 }

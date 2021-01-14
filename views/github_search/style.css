@@ -92,3 +92,9 @@ img {
   margin-top: 20px;
   box-shadow: 0 10px 50px rgb(255, 255, 255);
 }
+
+.returnLink {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
