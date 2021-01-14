@@ -1,15 +1,94 @@
 :root {
     font-size: 16px;
+    --color-bg: #cdcdcd;
+}
+
+body {
+    background-color: var(--color-bg);
+}
+
+form {
+    display: flex;
+    flex-direction: inherit;
+    width: 450px;
+    margin: 100px auto 50px auto;
+    border-radius: 40px;
+    background: transparent;
+}
+
+button {
+    display: inline;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    height: 40px;
+    width: 110px;
+    font: 13px/40px 'lucida sans', 'trebuchet MS', 'Tahoma';
+    color: #fff;
+    text-transform: uppercase;
+    background: #222831;
+    border-radius: 40px;
+    text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
+}
+
+button:focus {
+    outline: 0;
+}
+
+#input {
+    padding-left: 20px;
+    width: 330px;
+    height: 20px;
+    padding: 10px 5px;
+    float: left;   
+    font: bold 13px;
+    border: 0;
+    background: #fff;
+    border-radius: 40px;
+    border-top-style: none;
+}
+#input:focus {
+    outline: 0;
+    background: #fff;
+    box-shadow: 0 0 2px rgba(0,0,0,0.8) inset;
+}
+
+#submit {
+    margin-left: 3%;
+    height: 30%;
 }
 
 #resultats {
-    margin: 0 auto;
+    margin-left: 30%;
+    margin-right: 30%;
+    background-color: #222831;
+    height: 32rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.7);
+    color: white;
+}
+
+#name {
+    padding-top: 35%;
+    padding-bottom: 35%;
+    font-size: 1.5em;
+}
+
+p {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 1em;
 }
 
 img {
-    position: relative;
-    left: 50%;
-    border-radius: 100%;
-    transform: translateX(-100px);
-    width: 200px;
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
+  border: 5px solid #272133;
+  margin-top: 20px;
+  box-shadow: 0 10px 50px rgb(255, 255, 255);
 }
