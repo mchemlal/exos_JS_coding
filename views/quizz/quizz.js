@@ -5,7 +5,7 @@ let questions = [
     reponse: {
       a: "Justin Trudeau",
       b: "Lara Fabian",
-      c: "Celine Dion",
+      c: "Céline Dion",
     },
     correctReponse: "Justin Trudeau",
   },
@@ -13,11 +13,11 @@ let questions = [
     id: "q2",
     question: "Qui a chanté Dieu m'a donné la foi ?",
     reponse: {
-      a: "Ophelie Winter",
-      b: "Diams",
+      a: "Ophélie Winter",
+      b: "Diam's",
       c: "L'Imam Bajrafil",
     },
-    correctReponse: "Ophelie Winter",
+    correctReponse: "Ophélie Winter",
   },
   {
     id: "q3",
@@ -35,7 +35,7 @@ let questions = [
     reponse: {
       a: "Valery",
       b: "Tan",
-      c: "Benoit Mariage",
+      c: "Benoît Mariage",
     },
     correctReponse: "Tan",
   },

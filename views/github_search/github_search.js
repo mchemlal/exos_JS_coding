@@ -6,6 +6,7 @@ function fetchUser(event) {
   let userInput = document.getElementById("input");
   let user = userInput.value;
 
+  // template string
   const github_URI = `https://api.github.com/users/${user}`;
 
   fetch(github_URI)
@@ -14,10 +15,13 @@ function fetchUser(event) {
     })
     .then(json => {
       let data = json;
-      console.log("fetchUser -> data", data.message);
-
-      if (data.message == undefined) {
+      // !undefined or false = user exist
+      // message d'erreur => input "vide"
+      // => nom non présent dans la DB
+      if (!data.message) {
+        // destructuring
         let { avatar_url, followers, following, name, public_repos } = data;
+        // let avatar_url = data.avatar_url
 
         let avatar = document.querySelector("#avatar");
         avatar.setAttribute("src", avatar_url);
